@@ -21,7 +21,7 @@ def load_file(file)
     line = fd.readline.chomp.strip.downcase
     next if line.nil?
     next if line =~ (/^\s+#/) # Allow comments so I can credit sources
-    words = line.split(/[\s.,-]+/)
+    words = line.split(/[\s.,?!–]+/)
     
     words.each do |word|
       if hash.has_key?(word)
@@ -69,7 +69,12 @@ def analyze(speech, dict)
 end
 
 def main(options)
-  speech = load_speech(options[:speech])
+  if !ARGV[0].nil?
+    puts "Using #{ARGV[0]}"
+    speech = load_speech(ARGV[0])
+  else
+    speech = load_speech(options[:speech])
+  end
   dict = load_dict(options[:dictionary])
   analyze(speech, dict)
 end
