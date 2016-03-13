@@ -7,7 +7,7 @@ The original concept was to see how various speakers performed against the 1000 
 Dictionary source:
 http://splasho.com/upgoer5/phpspellcheck/dictionaries/1000.dicin
 
-Method: Googled "<candidate> speech transcript" and used first result
+Method: Googled "[candidate] speech transcript" and used first result
 
 Donald Trump speech source:
 http://www.p2016.org/photos15/summit/trump012415spt.html
